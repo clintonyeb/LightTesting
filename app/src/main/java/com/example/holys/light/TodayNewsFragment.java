@@ -11,6 +11,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 public class TodayNewsFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
@@ -118,7 +119,7 @@ public class TodayNewsFragment extends Fragment {
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-               // resetUpdating();
+               resetUpdating();
             }
 
             @Override
@@ -148,7 +149,7 @@ public class TodayNewsFragment extends Fragment {
                     case 4:
                         break;
                 }
-                //resetUpdating();
+                resetUpdating();
             }
 
             @Override
@@ -167,7 +168,7 @@ public class TodayNewsFragment extends Fragment {
         m = refreshMenu.findItem(R.id.action_refreshing);
         super.onCreateOptionsMenu(menu, inflater);
     }
-    public void resetUpdating()
+    public static void resetUpdating()
     {
         if(m != null)
         {
@@ -179,6 +180,20 @@ public class TodayNewsFragment extends Fragment {
             }
 
         }
+    }
+    @Override
+    public boolean onOptionsItemSelected (MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        if (id == R.id.action_refreshing)
+        {
+            Toast.makeText(getContext(), "Swipe to refresh", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

@@ -40,7 +40,7 @@ public class FetchNewsDataJSON extends AsyncTask<TabsFragment, Void, Void> {
             final String baseUri = "http://content.guardianapis.com/search?";
             Uri uriBuilder = Uri.parse(baseUri)
                     .buildUpon()
-                    .appendQueryParameter("section", "world|opinion|media|society|australia-news|us-news|uk-news|politics|law|")
+                    .appendQueryParameter("section", "world|opinion|media|society")
                     .appendQueryParameter("order-by", "newest")
                     .appendQueryParameter("use-date", "published")
                     .appendQueryParameter("show-fields", "trailText,thumbnail")

@@ -8,7 +8,7 @@ import android.util.Log;
 
 import com.example.holys.light.DATABASE_DIR.NewsContract;
 import com.example.holys.light.NEWS_DIR.NewsFacade;
-import com.example.holys.light.Tabs.CultureFrag;
+import com.example.holys.light.Tabs.TabsSuperClass;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
@@ -22,11 +22,11 @@ import java.util.List;
 /**
  * Created by holys on 3/1/2016.
  */
-public class FetchCulture extends AsyncTask<CultureFrag, Void, Void> {
-    CultureFrag _fragment;
+public class FetchCulture extends AsyncTask<TabsSuperClass, Void, Void> {
+    TabsSuperClass _fragment;
 
     @Override
-    protected Void doInBackground (CultureFrag... params) {
+    protected Void doInBackground (TabsSuperClass... params) {
         // These two need to be declared outside the try/catch
         // so that they can be closed in the finally block.
         HttpURLConnection urlConnection = null;
@@ -45,7 +45,7 @@ public class FetchCulture extends AsyncTask<CultureFrag, Void, Void> {
                     .appendQueryParameter("order-by", "newest")
                     .appendQueryParameter("use-date", "published")
                     .appendQueryParameter("show-fields", "trailText,thumbnail")
-                    .appendQueryParameter("page", String.valueOf(CultureFrag.pageSize))
+                    .appendQueryParameter("page", String.valueOf(TabsSuperClass.pageSize))
                     .appendQueryParameter("page-size", "10")
                     .appendQueryParameter("api-key", "255d0959-a40e-4fb5-98ae-4d3914d5009a")
                     .build();

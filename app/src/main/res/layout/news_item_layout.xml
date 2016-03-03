@@ -2,9 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-    android:paddingRight="16dp"
-    android:paddingLeft="16dp"
-    android:paddingBottom="8dp">
+              android:paddingRight="16dp"
+              android:paddingLeft="16dp"
+              android:paddingBottom="8dp">
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -38,12 +38,12 @@
                     android:id="@+id/timeTextView"
                     android:textColor="@color/secondary_text"
                     android:textSize="12sp"
-                    />
+                    android:text="22:45"/>
             </LinearLayout>
 
             <android.support.v4.widget.Space
                 android:layout_width="match_parent"
-                android:layout_height="6dp"
+                android:layout_height="4dp"
                />
             <LinearLayout
                 android:layout_width="match_parent"
@@ -59,32 +59,24 @@
                     android:layout_weight="1"
                     android:layout_marginEnd="4dp"
                     android:textSize="18sp"
-                    android:maxLines="3"
+                    android:maxLines="5"
                     android:ellipsize="end"/>
                 <ImageView
-                    android:layout_height="100dp"
-                    android:layout_width="100dp"
+                    android:layout_height="130dp"
+                    android:layout_width="130dp"
                     android:id="@+id/thumbImageView"
-                    android:layout_gravity="center_vertical"
-                    android:scaleType="fitCenter"/>
+                    android:scaleType="fitStart"/>
             </LinearLayout>
-            <android.support.v4.widget.Space
-                android:layout_width="match_parent"
-                android:layout_height="6dp"
-                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="fill"
+                android:gravity="fill_horizontal"
                 android:id="@+id/textTextView"
                 android:textColor="@color/secondary_text"
                 android:textSize="14sp"
                 android:ellipsize="end"
-                android:maxLines="3"/>
-            <android.support.v4.widget.Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="fill"/>
+                android:maxLines="3"
+                android:layout_gravity="top"/>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

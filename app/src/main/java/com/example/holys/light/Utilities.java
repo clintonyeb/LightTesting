@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat;
  * Created by holys on 3/3/2016.
  */
 public class Utilities {
-    public static final String DATE_FORMAT = "yyyyMMdd";
+    public static final String DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss";
 
     public static String getFriendlyDayString(Context context, long dateInMillis) {
         // The day string for forecast uses the following logic:

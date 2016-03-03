@@ -10,15 +10,40 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:id="@+id/swipeRefreshLayout"
-        >
-        <android.support.v7.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/mRecyclerView"/>
-
+        android:id="@+id/swipeRefreshLayout">
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mRecyclerView"
+                />
     </android.support.v4.widget.SwipeRefreshLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/firstTimeLayout"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/firstString"
+            android:textSize="28sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"/>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:indeterminateDrawable="@drawable/circular_progress_bar"
+            android:layout_gravity="center_horizontal">
+        </ProgressBar>
+
+    </LinearLayout>
 
         <Button
             android:layout_width="match_parent"

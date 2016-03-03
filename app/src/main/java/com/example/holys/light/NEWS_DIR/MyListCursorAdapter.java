@@ -65,7 +65,8 @@ public class MyListCursorAdapter extends CursorRecyclerViewAdapter<MyListCursorA
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, Cursor cursor) {
         final NewsFacade facade = NewsFacade.fromCursor(cursor);
-        viewHolder.time.setText(ParseDate(facade.getDate()));
+        String t = "<b>"+ ParseDate(facade.getDate())+"</b>";
+        viewHolder.time.setText(Html.fromHtml(t));
         viewHolder.content.setText(Html.fromHtml(facade.getText()));
         viewHolder.image.setImageBitmap(facade.getThumb());
         String hash = "<b>"+ facade.getTag()+"</b>";
