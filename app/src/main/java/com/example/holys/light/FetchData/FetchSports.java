@@ -20,7 +20,7 @@ import java.net.URL;
 import java.util.List;
 
 /**
- * Created by holys on 3/1/2016.
+ * Created by Clinton on 3/1/2016.
  */
 public class FetchSports extends AsyncTask<SportFrag, Void, Void> {
     SportFrag _fragment;
@@ -32,7 +32,7 @@ public class FetchSports extends AsyncTask<SportFrag, Void, Void> {
         HttpURLConnection urlConnection = null;
         BufferedReader reader = null;
         // Will contain the raw JSON response as a string.
-        String forecastJsonStr = null;
+        String forecastJsonStr;
         //CastToCorrectType(params[0]);
         _fragment = params[0];
 
@@ -41,7 +41,7 @@ public class FetchSports extends AsyncTask<SportFrag, Void, Void> {
             final String baseUri = "http://content.guardianapis.com/search?";
             Uri uriBuilder = Uri.parse(baseUri)
                     .buildUpon()
-                    .appendQueryParameter("section", "sport")
+                    .appendQueryParameter("section", "sport|football")
                     .appendQueryParameter("order-by", "newest")
                     .appendQueryParameter("use-date", "published")
                     .appendQueryParameter("show-fields", "trailText,thumbnail")

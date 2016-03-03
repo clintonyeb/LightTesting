@@ -118,7 +118,7 @@ public class TodayNewsFragment extends Fragment {
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                resetUpdating();
+               // resetUpdating();
             }
 
             @Override
@@ -148,7 +148,7 @@ public class TodayNewsFragment extends Fragment {
                     case 4:
                         break;
                 }
-                resetUpdating();
+                //resetUpdating();
             }
 
             @Override

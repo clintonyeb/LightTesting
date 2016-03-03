@@ -42,7 +42,7 @@ public class FetchScience extends AsyncTask<ScienceFrag, Void, Void>
             final String baseUri = "http://content.guardianapis.com/search?";
             Uri uriBuilder = Uri.parse(baseUri)
                     .buildUpon()
-                    .appendQueryParameter("section", "technology")
+                    .appendQueryParameter("section", "science|environment|technology|business")
                     .appendQueryParameter("order-by", "newest")
                     .appendQueryParameter("use-date", "published")
                     .appendQueryParameter("show-fields", "trailText,thumbnail")

@@ -41,7 +41,7 @@ public class FetchLifeStyle extends AsyncTask<LifeStyleFrag, Void, Void> {
             final String baseUri = "http://content.guardianapis.com/search?";
             Uri uriBuilder = Uri.parse(baseUri)
                     .buildUpon()
-                    .appendQueryParameter("section", "lifeandstyle")
+                    .appendQueryParameter("section", "lifeandstyle|education|fashion|help")
                     .appendQueryParameter("order-by", "newest")
                     .appendQueryParameter("use-date", "published")
                     .appendQueryParameter("show-fields", "trailText,thumbnail")

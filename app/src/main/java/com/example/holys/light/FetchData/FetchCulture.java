@@ -41,7 +41,7 @@ public class FetchCulture extends AsyncTask<CultureFrag, Void, Void> {
             final String baseUri = "http://content.guardianapis.com/search?";
             Uri uriBuilder = Uri.parse(baseUri)
                     .buildUpon()
-                    .appendQueryParameter("section", "culture")
+                    .appendQueryParameter("section", "culture|society|local|music|books")
                     .appendQueryParameter("order-by", "newest")
                     .appendQueryParameter("use-date", "published")
                     .appendQueryParameter("show-fields", "trailText,thumbnail")

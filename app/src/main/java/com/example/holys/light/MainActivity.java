@@ -16,6 +16,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -58,6 +59,8 @@ public class MainActivity extends AppCompatActivity
     @Override
     public View onCreateView (String name, Context context, AttributeSet attrs) {
         View view =  super.onCreateView(name, context, attrs);
+
+        Log.i("OUTPUT", Utilities.getFriendlyDayString(this, 20140302));
         return view;
     }
 
